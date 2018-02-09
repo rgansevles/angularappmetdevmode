@@ -1,18 +1,15 @@
-import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
-
-import {AppComponent} from '../../src/app/app.component';
 import {BlaService} from '../../src/app/bla.service';
 import {BlaDevService} from './bla.service.dev';
+import {AppModule} from '../../src/app/app.module';
+import {AppComponent} from '../../src/app/app.component';
 
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [],
   imports: [
-    BrowserModule
+    AppModule
   ],
   providers: [{provide: BlaService, useClass: BlaDevService}],
   bootstrap: [AppComponent]
