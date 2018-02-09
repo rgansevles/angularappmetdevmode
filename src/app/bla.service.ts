@@ -1,12 +1,17 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 
 @Injectable()
 export class BlaService {
 
-  constructor() { }
-  
+  constructor() {
+  }
+
+  sys() {
+    return 'production';
+  }
+
   bla() {
-    return 'Bla for production';
+    return 'Bla for ' + this.sys();
   }
 
 }
